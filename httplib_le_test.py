@@ -62,6 +62,9 @@ print("    See https://github.com/jcgregorio/httplib2/issues/233")
 
 # Test Moodle
 print("+ Testing CU Main Moodle +")
+print("  NOTE: This will raise a verification error unless the following")
+print("        patch is included in your local version of httplib2:")
+print("        https://github.com/httplib2/httplib2/pull/26")
 h = httplib2.Http()
 res, content = h.request("https://moodle.cs.colorado.edu/")
 print("    status = {}".format(res.status))
